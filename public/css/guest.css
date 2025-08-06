@@ -1,0 +1,165 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f4f6fb;
+    color: #374151;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+    color: #6c63ff;
+    outline: none;
+}
+
+.navbar {
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgb(108 99 255 / 0.15);
+    padding: 0.75rem 1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar:hover {
+    box-shadow: 0 8px 24px rgb(108 99 255 / 0.25);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #4b46e5;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    user-select: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: #635cff;
+    transform: translateX(4px);
+}
+
+.navbar-brand svg {
+    width: 28px;
+    height: 28px;
+    fill: #4b46e5;
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.navbar-brand:hover svg,
+.navbar-brand:focus svg {
+    transform: scale(1.15);
+    fill: #635cff;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0.3rem 0.75rem;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+    background-color: #e0e0ff;
+    outline: none;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 600;
+    color: #4b46e5;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #635cff;
+}
+
+.navbar-nav .nav-link i {
+    font-size: 1.2rem;
+    vertical-align: middle;
+    transition: color 0.3s ease;
+}
+
+.main-content {
+    flex-grow: 1;
+    max-width: 900px;
+    margin: 2rem auto 3rem auto;
+    padding: 0 1.5rem;
+    width: 100%;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 0.8rem 1.6rem rgb(108 99 255 / 0.12);
+    border: none;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover,
+.card:focus-within {
+    box-shadow: 0 1.2rem 2.4rem rgb(108 99 255 / 0.2);
+    transform: translateY(-4px);
+}
+
+.footer {
+    background: #ffffff;
+    padding: 1.5rem 1rem;
+    border-top: 1px solid #e5e7eb;
+    font-size: 0.9rem;
+    color: #6b7280;
+    user-select: none;
+    margin-top: auto; 
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.footer-links a {
+    color: #6b7280;
+    font-weight: 600;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+    color: #4b46e5;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin: 1.5rem 1rem 2rem;
+        padding: 0 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links a {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
+}

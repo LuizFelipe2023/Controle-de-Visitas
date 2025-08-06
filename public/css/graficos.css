@@ -1,0 +1,125 @@
+:root {
+  --primary-color: #4e73df;
+  --primary-hover: #2e59d9;
+  --secondary-color: #858796;
+  --success-color: #1cc88a;
+  --info-color: #36b9cc;
+  --warning-color: #f6c23e;
+  --danger-color: #e74a3b;
+  --dark-color: #5a5c69;
+  --light-color: #f8f9fc;
+  --shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+  --transition: all 0.2s ease;
+}
+
+.bg-gradient-dark {
+  background: linear-gradient(135deg, #2c3e50 0%, #1a1a2e 100%);
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+}
+
+.shadow-dark {
+  box-shadow: var(--shadow);
+}
+
+.bg-gray-100 {
+  background-color: var(--light-color);
+}
+
+.card {
+  border: none;
+  transition: var(--transition);
+}
+
+.hover-scale {
+  transition: var(--transition);
+}
+
+.hover-scale:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.icon-shape {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.chart-container {
+  height: 300px;
+  min-height: 300px;
+  width: 100%;
+}
+
+.highcharts-container {
+  width: 100% !important;
+}
+
+.text-white-50 {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .card-header {
+    padding: 1rem !important;
+  }
+  
+  .card-body {
+    padding: 1rem !important;
+  }
+  
+  .icon-shape {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .chart-container {
+    height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    border-radius: 0 !important;
+  }
+  
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .chart-container {
+    height: 200px;
+  }
+  
+  .card-footer .row > div {
+    text-align: center !important;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-footer .row > div:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 400px) {
+  .card-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .card-header .badge {
+    font-size: 0.8rem;
+  }
+  
+  .chart-container {
+    height: 180px;
+  }
+}

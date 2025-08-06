@@ -1,0 +1,216 @@
+/* ===== Fonte personalizada: Inter ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body, button, input, textarea {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #1e293b;
+  background-color: #f9fafb;
+}
+
+/* ===== Container ===== */
+.container {
+  max-width: 850px;
+  margin-inline: auto;
+  padding-block: 3rem;
+}
+
+/* ===== Cards ===== */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  border: none;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(58, 100, 255, 0.12);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 48px rgba(58, 100, 255, 0.25);
+}
+
+.card-header {
+  background: linear-gradient(135deg, #01030e 0%, #1a1f3d 100%);
+  color: #fff;
+  text-align: center;
+  padding: 1.75rem 2rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  user-select: none;
+  box-shadow: inset 0 -4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.card-body {
+  padding: 3rem 3.5rem;
+}
+
+/* ===== Formulário ===== */
+.form-label {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: #334155;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-control {
+  width: 100%;
+  padding: 1rem 1.4rem;
+  font-size: 1.05rem;
+  background-color: #f8fafc;
+  border: 1.6px solid #cbd5e1;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.04);
+  color: #1e293b;
+  transition: all 0.3s ease;
+  outline-offset: 3px;
+}
+
+.form-control:focus {
+  background-color: #fff;
+  border-color: #3a64ff;
+  outline-color: #3a64ff;
+  box-shadow: 0 0 12px rgba(58, 100, 255, 0.45);
+}
+
+.form-control::placeholder {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+textarea.form-control {
+  min-height: 160px;
+  resize: vertical;
+  font-family: inherit;
+  box-shadow: inset 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.invalid-feedback {
+  margin-top: 0.45rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ef4444;
+}
+
+/* ===== Botões ===== */
+.btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary {
+  background-color: #3a64ff;
+  border-color: #3a64ff;
+  color: #fff;
+  box-shadow: 0 8px 30px rgba(58, 100, 255, 0.5);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #2b47c4;
+  border-color: #2b47c4;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 45px rgba(43, 71, 196, 0.65);
+  outline: none;
+}
+
+.btn-secondary {
+  background-color: #6b7280;
+  border-color: #6b7280;
+  color: #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #4b5563;
+  border-color: #4b5563;
+  transform: translateY(-2px);
+}
+
+.btn-success {
+  background-color: #22c55e;
+  border-color: #22c55e;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(34, 197, 94, 0.55);
+}
+
+.btn-success:hover,
+.btn-success:focus {
+  background-color: #16a34a;
+  border-color: #16a34a;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(22, 163, 74, 0.75);
+  outline: none;
+}
+
+/* ===== Modal ===== */
+.modal-content {
+  border-radius: 16px;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.22);
+  transition: all 0.4s ease;
+}
+
+.modal-header {
+  background-color: #f0f4ff;
+  border-bottom: 2px solid #3a64ff;
+  padding: 2rem 2.5rem;
+}
+
+.modal-title {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #1e293b;
+}
+
+.modal-body {
+  padding: 2.5rem 3rem;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #334155;
+}
+
+.modal-footer {
+  border-top: 2px solid #e2e8f0;
+  padding: 2rem 3rem;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 992px) {
+  .container {
+    max-width: 90%;
+    padding-block: 2.5rem;
+  }
+
+  .card-body {
+    padding: 2.5rem 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-body {
+    padding: 2rem 1.8rem;
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .text-end {
+    text-align: center !important;
+  }
+}

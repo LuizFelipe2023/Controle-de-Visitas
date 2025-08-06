@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --color-primary: #5a67d8; /* tom roxo suave */
+  --color-primary-dark: #434190;
+  --color-secondary: #edf2f7; /* fundo clarinho */
+  --color-text-dark: #2d3748;
+  --color-text-muted: #718096;
+  --color-border: #e2e8f0;
+  --color-btn-hover: #434190;
+  --border-radius: 0.75rem;
+  --shadow-light: 0 4px 8px rgba(90, 103, 216, 0.15);
+  --shadow-hover: 0 8px 16px rgba(67, 65, 144, 0.25);
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-secondary);
+  color: var(--color-text-dark);
+}
+
+.container {
+  max-width: 900px;
+}
+
+.card {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  border: 1px solid var(--color-border);
+  transition: box-shadow var(--transition), transform var(--transition);
+  cursor: default;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-5px);
+}
+
+.card-header {
+  background: linear-gradient(135deg, #4c51bf, #2a2e75);
+  color: #fff;
+  padding: 1.8rem 2rem;
+  border-bottom: none;
+  border-radius: 14px 14px 0 0;
+  text-align: center;
+  user-select: none;
+  box-shadow: inset 0 -4px 12px rgba(0,0,0,0.2);
+  font-weight: 700;
+  font-size: 1.7rem;
+  letter-spacing: 0.06em;
+}
+
+.card-header h3 {
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: var(--color-primary);
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.05em;
+}
+
+.card-header small {
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.03em;
+}
+
+.card-body {
+  padding: 2rem 2.5rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+.form-control-plaintext {
+  background: var(--color-secondary);
+  border-radius: var(--border-radius);
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  color: var(--color-text-dark);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+  user-select: text;
+  transition: background-color var(--transition);
+}
+
+.form-control-plaintext:hover {
+  background-color: #e0e7ff;
+}
+
+h5 {
+  color: var(--color-primary);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 0.4rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.04em;
+}
+
+.bg-light {
+  background-color: var(--color-secondary) !important;
+  border-radius: var(--border-radius);
+  box-shadow: inset 0 0 5px rgba(90, 103, 216, 0.1);
+  padding: 1.2rem 1.5rem !important;
+  font-size: 1rem !important;
+  white-space: pre-wrap;
+}
+
+.mt-3 {
+  margin-top: 1.5rem !important;
+}
+
+.mb-3 {
+  margin-bottom: 1.5rem !important;
+}
+
+.d-flex.justify-content-center.gap-2 {
+  margin-bottom: 1.5rem;
+}
+
+.btn-outline-secondary,
+.btn-warning {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition), color var(--transition);
+  font-size: 0.9rem;
+  box-shadow: 0 2px 5px rgba(90, 103, 216, 0.1);
+}
+
+.btn-outline-secondary {
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  background-color: transparent;
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 10px rgba(90, 103, 216, 0.3);
+}
+
+.btn-warning {
+  background-color: #f6ad55;
+  border-color: #ed8936;
+  color: white;
+  box-shadow: 0 2px 6px rgba(246, 173, 85, 0.4);
+}
+
+.btn-warning:hover {
+  background-color: #dd6b20;
+  border-color: #c05621;
+  box-shadow: 0 4px 12px rgba(221, 107, 32, 0.5);
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .card-body {
+    padding: 1.5rem 1.5rem;
+  }
+  .container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}

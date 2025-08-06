@@ -1,0 +1,76 @@
+.bg-light-gradient {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
+}
+
+.bg-primary-gradient {
+    background: linear-gradient(135deg, #7f00ff 0%, #e100ff 100%);
+}
+
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.rating-container {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.star-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    font-size: 2rem;
+    line-height: 2rem;
+    margin: 0 auto;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.star-rating :checked~label,
+.star-rating label:hover,
+.star-rating label:hover~label {
+    color: #ffc107;
+}
+
+.star-rating label:active {
+    transform: scale(0.95);
+}
+
+.btn-primary-gradient {
+    background: linear-gradient(135deg, #7f00ff 0%, #e100ff 100%);
+    border: none;
+    color: white;
+    transition: all 0.3s;
+}
+
+.btn-primary-gradient:hover {
+    background: linear-gradient(135deg, #6a00cc 0%, #c700e0 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-control:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.input-group-text {
+    transition: all 0.3s;
+}
+
+.input-group:focus-within .input-group-text {
+    background-color: #e7f1ff;
+    color: #0d6efd;
+}

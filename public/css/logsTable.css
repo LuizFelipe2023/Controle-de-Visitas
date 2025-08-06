@@ -1,0 +1,194 @@
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-body h4 {
+    color: #2c3e50;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-body h4 i {
+    color: #6c5ce7;
+    font-size: 1.4rem;
+}
+
+.btn-primary {
+    background-color: #6c5ce7;
+    border-color: #6c5ce7;
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-primary:hover {
+    background-color: #5649c0;
+    border-color: #5649c0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 92, 231, 0.3);
+}
+
+.btn-primary i {
+    margin-right: 6px;
+}
+
+.alert {
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    border: none;
+    background-color: #f0f0ff;
+    color: #333;
+}
+
+.alert i {
+    font-size: 1.1rem;
+    margin-right: 6px;
+}
+
+.table-responsive {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#logsTable {
+    width: 100% !important;
+    margin-top: 1.5rem;
+}
+
+#logsTable thead {
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    color: white;
+}
+
+#logsTable th {
+    padding: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+#logsTable td {
+    padding: 0.75rem 1rem;
+    vertical-align: middle;
+    color: #333;
+}
+
+#logsTable tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+#logsTable tbody tr:hover {
+    background-color: rgba(108, 92, 231, 0.05);
+}
+
+.dropdown-toggle {
+    border-radius: 6px;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+}
+
+.dropdown-toggle:hover {
+    transform: translateY(-1px);
+    background-color: #f1f1f1;
+}
+
+.dropdown-menu {
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(108, 92, 231, 0.1);
+}
+
+.dropdown-item i {
+    width: 20px;
+    text-align: center;
+    margin-right: 8px;
+}
+
+.modal-content {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: none;
+    padding: 1.25rem 1.5rem;
+}
+
+.modal-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.modal-title i {
+    font-size: 1.25rem;
+}
+
+.modal-body {
+    padding: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.modal-footer {
+    border-top: none;
+    padding: 1rem 1.5rem;
+}
+
+.modal-footer .btn {
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .d-flex.justify-content-between {
+        flex-direction: column !important;
+        gap: 1rem;
+    }
+
+    .table-responsive {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
