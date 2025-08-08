@@ -65,6 +65,9 @@ Route::prefix('logs')->group(function () {
     Route::delete('/{id}', [LogController::class, 'deleteLog'])->name('logs.delete');
 });
 
+Route::get('/feedback/relatorio/pdf', [FeedbackController::class, 'exportarRelatorioMensal'])->name('feedback.relatorio.pdf');
+
+
 
 Route::get('/', function () {
      if(Auth::check()){

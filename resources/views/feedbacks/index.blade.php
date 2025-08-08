@@ -5,18 +5,23 @@
 <script src="{{ asset('js/datatables/dataTables.min.js') }}"></script>
 
 @section('content')
-     <div class="container mt-4">
+    <div class="container mt-4">
         <div class="card shadow-sm rounded-3">
             <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <h4 class="mb-0">
                         <i class="bi bi-chat-square-heart-fill me-2"></i> Feedbacks
                     </h4>
-                    <a href="{{ route('feedbacks.create') }}" class="btn btn-primary">
-                        <i class="bi bi-plus-lg me-1"></i> Novo Feedback
-                    </a>
-                </div>
 
+                    <div class="d-flex gap-2">
+                        <a href="{{ route('feedbacks.create') }}" class="btn btn-primary">
+                            <i class="bi bi-plus-lg me-1"></i> Novo Feedback
+                        </a>
+                        <a href="{{ route('feedback.relatorio.pdf') }}" class="btn btn-outline-secondary" target="_blank">
+                            <i class="bi bi-file-earmark-pdf me-1"></i> Relatório Mensal
+                        </a>
+                    </div>
+                </div>
                 @if (session('success'))
                     <div class="alert alert-success d-flex align-items-center">
                         <i class="bi bi-check-circle me-2"></i>
@@ -56,10 +61,8 @@
                                             </button>
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <button class="dropdown-item text-danger btn-delete"
-                                                        data-bs-toggle="modal"
-                                                        data-bs-target="#confirmDeleteModal"
-                                                        data-id="{{ $feedback->id }}">
+                                                    <button class="dropdown-item text-danger btn-delete" data-bs-toggle="modal"
+                                                        data-bs-target="#confirmDeleteModal" data-id="{{ $feedback->id }}">
                                                         <i class="bi bi-trash-fill me-1"></i> Excluir
                                                     </button>
                                                 </li>

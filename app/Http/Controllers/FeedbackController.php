@@ -7,6 +7,8 @@ use App\Services\VisitaService;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Carbon;
 
 class FeedbackController extends Controller
 {
@@ -68,4 +70,17 @@ class FeedbackController extends Controller
             return redirect()->route('feedbacks.index')->with('error', 'Erro ao excluir feedback. Tente novamente.');
         }
     }
+
+    public function exportarRelatorioMensal(FeedbackService $service)
+    {
+        $relatorio = $service->gerarRelatorioMensal();
+
+        $pdf = Pdf::loadView('pdfs.relatorio-feedback', compact('relatorio'))
+            ->setPaper('a4', 'portrait');
+
+        $nomeArquivo = 'relatorio_feedback_' . Carbon::now()->format('m_Y') . '.pdf';
+
+        return $pdf->download($nomeArquivo);
+    }
+
 }
